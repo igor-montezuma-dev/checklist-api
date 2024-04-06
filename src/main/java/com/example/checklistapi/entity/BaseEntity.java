@@ -1,14 +1,11 @@
 package com.example.checklistapi.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import jakarta.persistence.MappedSuperclass;
+import lombok.Data;
 
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
+
+@Data
+@MappedSuperclass
 public class BaseEntity {
     private String guid;
 }
