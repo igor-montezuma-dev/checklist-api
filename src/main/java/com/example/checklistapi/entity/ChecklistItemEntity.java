@@ -21,8 +21,8 @@ public class ChecklistItemEntity extends BaseEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long checklistItemId;
-    private Boolean isCompleted;
-    private String itemDescription;
+    private Boolean isComplete;
+    private String description;
     private LocalTime deadline;
     private LocalTime postedDate;
     @ManyToOne
