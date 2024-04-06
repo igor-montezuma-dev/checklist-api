@@ -1,13 +1,17 @@
 package com.example.checklistapi.repository;
 
-import com.example.checklistapi.entity.Category;
+import com.example.checklistapi.entity.CategoryEntity;
+
 import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
-public interface CategoryRepository extends PagingAndSortingRepository<Category, Long> {
+@Repository
+public interface CategoryRepository extends PagingAndSortingRepository<CategoryEntity, Long> {
 
-    Optional<Category> findByCategoryName(String categoryName);
+    Optional<CategoryEntity> findByName(String name);
 
-    Optional<Category> findByGuid(String guid);
+    Optional<CategoryEntity> findByGuid(String guid);
+
 }
