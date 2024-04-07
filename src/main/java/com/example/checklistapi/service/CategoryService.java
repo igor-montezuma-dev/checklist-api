@@ -16,8 +16,8 @@ import java.util.List;
 @Slf4j
 @Service
 public class CategoryService {
-    private ChecklistItemRepository checklistItemRepository;
-    private CategoryRepository categoryRepository;
+    private final ChecklistItemRepository checklistItemRepository;
+    private final CategoryRepository categoryRepository;
 
     public CategoryService(ChecklistItemRepository checklistItemRepository, CategoryRepository categoryRepository) {
         this.checklistItemRepository = checklistItemRepository;
