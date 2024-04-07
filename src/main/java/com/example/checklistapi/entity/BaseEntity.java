@@ -1,7 +1,9 @@
 package com.example.checklistapi.entity;
 
-import jakarta.persistence.MappedSuperclass;
+
 import lombok.Data;
+
+import javax.persistence.MappedSuperclass;
 
 
 @Data
