@@ -4,6 +4,7 @@ import com.example.checklistapi.entity.ChecklistItemEntity;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.Optional;
 
 @Repository
@@ -11,4 +12,6 @@ public interface ChecklistItemRepository extends PagingAndSortingRepository<Chec
 
     Optional<ChecklistItemEntity> findByGuid(String guid);
     Optional<ChecklistItemEntity> findByDescriptionAndIsComplete(String description, boolean isComplete);
+
+    List<ChecklistItemEntity> findByCategoryGuid(String guid);
 }

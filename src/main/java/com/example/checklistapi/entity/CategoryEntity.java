@@ -28,7 +28,7 @@ public class CategoryEntity extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long categoryId;
     @Column(unique = true)
-    private String categoryName;
+    private String name;
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
     private List<ChecklistItemEntity> checklistItems;
 }
